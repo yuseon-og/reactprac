@@ -1,24 +1,21 @@
 import React from "react";
-import logo from "./logo.svg";
+import Movie from "./Movie";
 import "./App.css";
+
+const moviesTitles = ["matrix", "iron man", "Hulk"];
+
+const movieImages = [
+  "https://post-phinf.pstatic.net/MjAxOTA4MjFfMjg0/MDAxNTY2MzQ4ODYxNjM2.dhCDfrjD4gmQAMpqTU2OoPI8Bpbpz--hlO6cWaJXJs0g.Spmg8TZy1V5fFRNhcrRwV5Y6TXvM7JcEJlcRBjAjHAEg.JPEG/81.jpg?type=w1200",
+  "https://i.ytimg.com/vi/sL1yJZFBXdY/maxresdefault.jpg",
+  "https://post-phinf.pstatic.net/MjAxODA3MjdfMjAx/MDAxNTMyNjYwMzM0NzU4.hoB63-LGxdAXf-EdDf2Lpg1480mbPxUej-ycGj91gEwg.OZo9Je9ygtStegsDnnT8frqUK2KcoOlZiqCuRdls0Vog.JPEG/%ED%97%90%ED%81%AC.jpg?type=w1200",
+];
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reloadasdfasdf.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Movie title={moviesTitles[0]} poster={movieImages[0]} />
+      <Movie title={moviesTitles[1]} poster={movieImages[1]} />
+      <Movie title={moviesTitles[2]} poster={movieImages[2]} />
     </div>
   );
 }
